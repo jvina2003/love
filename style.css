@@ -164,6 +164,7 @@
     background-color: white;
     flex-direction: column;
     margin-top: 4em;
+    margin-bottom: -2em;
   }
   .controls-container button {
     font-size: 2em;
