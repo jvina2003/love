@@ -162,7 +162,7 @@ const creator = () => {
     if (isTouchDevice()) {
       quoteDiv.style.position = "absolute";
     }
-    quoteDiv.innerHTML = `<"https://jvina2003.github.io/love/${i}.png" id="${i}">`;
+    quoteDiv.innerHTML = `<img src = "https://jvina2003.github.io/love/${i}.png" id="${i}">`;
     dragContainer.appendChild(quoteDiv);
   }
   //Sort the array randomly before creating country divs
