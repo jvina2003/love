@@ -1,3 +1,5 @@
+
+
 //Initial References
 let draggableObjects;
 let dropPoints;
@@ -107,7 +109,7 @@ const drop = (e) => {
       //insert new img element
       currentDrop.insertAdjacentHTML(
         "afterbegin",
-        `<img src= "https://jvina2003.github.io/love/${currentElement.id}.png">`
+        `<img src= "${currentElement.id}.png">`
       );
       count += 1;
     }
@@ -128,7 +130,7 @@ const drop = (e) => {
       //insert new img
       e.target.insertAdjacentHTML(
         "afterbegin",
-        `<img src="https://jvina2003.github.io/love/${draggedElementData}.png">`
+        `<img src="${draggedElementData}.png">`
       );
       count += 1;
     }
@@ -162,18 +164,18 @@ const creator = () => {
     if (isTouchDevice()) {
       quoteDiv.style.position = "absolute";
     }
-    quoteDiv.innerHTML = `<img src = "https://jvina2003.github.io/love/${i}.png" id="${i}">`;
+    quoteDiv.innerHTML = `<img src="${i}.png" id="${i}">`;
     dragContainer.appendChild(quoteDiv);
   }
-  //Sort the array randomly before creating country divs
+  //Sort the array randomly before creating gen divs
   randomData = randomData.sort(() => 0.5 - Math.random());
   for (let i of randomData) {
-    const countryDiv = document.createElement("div");
-    countryDiv.innerHTML = `<div class='generations' data-id='${i}'>
+    const genDiv = document.createElement("div");
+    genDiv.innerHTML = `<div class='generations' data-id='${i}'>
     ${i.charAt(0).toUpperCase() + i.slice(1).replace("-", " ")}
     </div>
     `;
-    dropContainer.appendChild(countryDiv);
+    dropContainer.appendChild(genDiv);
   }
 };
 
