@@ -153,6 +153,7 @@
     padding: 0;
     background-color: #e5ffc8;
   }
+
   .controls-container {
     position: relative;
     display: flex;
@@ -162,7 +163,7 @@
     width: 100%;
     background-color: white;
     flex-direction: column;
-
+    margin-top: 4em;
   }
   .controls-container button {
     font-size: 2em;
