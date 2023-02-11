@@ -109,7 +109,7 @@ const drop = (e) => {
       //insert new img element
       currentDrop.insertAdjacentHTML(
         "afterbegin",
-        `<img src= "${currentElement.id}.png">`
+        `<img src= "https://jvina2003.github.io/love/${currentElement.id}.png">`
       );
       count += 1;
     }
@@ -130,7 +130,7 @@ const drop = (e) => {
       //insert new img
       e.target.insertAdjacentHTML(
         "afterbegin",
-        `<img src="${draggedElementData}.png">`
+        `<img src="https://jvina2003.github.io/love/${draggedElementData}.png">`
       );
       count += 1;
     }
@@ -164,7 +164,7 @@ const creator = () => {
     if (isTouchDevice()) {
       quoteDiv.style.position = "absolute";
     }
-    quoteDiv.innerHTML = `<img src="${i}.png" id="${i}">`;
+    quoteDiv.innerHTML = `<img src="https://jvina2003.github.io/love/${i}.png" id="${i}">`;
     dragContainer.appendChild(quoteDiv);
   }
   //Sort the array randomly before creating gen divs
