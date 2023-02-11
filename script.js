@@ -107,7 +107,7 @@ const drop = (e) => {
       //insert new img element
       currentDrop.insertAdjacentHTML(
         "afterbegin",
-        `<img src= "${currentElement.id}.png">`
+        `<img src= "https://github.com/jvina2003/love/blob/main/${currentElement.id}.png">`
       );
       count += 1;
     }
@@ -128,7 +128,7 @@ const drop = (e) => {
       //insert new img
       e.target.insertAdjacentHTML(
         "afterbegin",
-        `<img src= "${currentElement.id}.png">`
+        `<img src= "https://github.com/jvina2003/love/blob/main/${currentElement.id}.png">`
       );
       count += 1;
     }
@@ -162,7 +162,7 @@ const creator = () => {
     if (isTouchDevice()) {
       quoteDiv.style.position = "absolute";
     }
-    quoteDiv.innerHTML = `<img src="${i}.png" id="${i}">`;
+    quoteDiv.innerHTML = `<img src="https://github.com/jvina2003/love/blob/main/${i}.png" id="${i}">`;
     dragContainer.appendChild(quoteDiv);
   }
   //Sort the array randomly before creating country divs
