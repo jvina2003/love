@@ -163,6 +163,7 @@
     width: 100%;
     background-color: white;
     flex-direction: column;
+    margin-bottom:-2em;
   }
   .controls-container button {
     font-size: 2em;
@@ -173,6 +174,7 @@
     color: #010c39;
     letter-spacing: 0.06em;
     cursor: pointer;
+    margin-top: 5em;
   }
   /*
   .controls-container p {
