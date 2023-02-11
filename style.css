@@ -1,0 +1,239 @@
+/* GENERAL */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: white;
+  }
+
+  p {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto 0.2em auto;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    line-height: 1.8em;
+    color: #010c39;
+  }
+
+  h2 {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto 0.2em auto;
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    line-height: 1.8em;
+    color: #010c39;
+  }
+
+  h3 {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto 0.2em auto;
+    font-size: 1.5em;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    line-height: 1.8em;
+    color: #010c39;
+  }
+
+  h4 {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto 1em auto;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    line-height: 1.8em;
+    color: #010c39;
+  }
+
+/* VIDEO */
+  
+.bg-video-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    scroll-behavior: smooth;
+  }
+  /*
+.overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(45deg, rgba(21, 21, 21, 0.772) 50%, rgba(34, 34, 34, 0.567) 50%);
+    background-size: 3px 3px;
+  }
+  */
+
+  .video {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+}
+  video {
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+    -webkit-filter: grayscale(100%); 
+  filter: brightness(800%);
+  filter: grayscale(100%);
+  }
+
+/* INTRO */
+
+ .intro {
+    margin: 8em;
+    padding-left: 5em;
+    padding-right: 5em;
+ }
+
+
+
+/* QUIZ */
+
+ .quiz {
+    margin-top: 20em;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 80em;
+    background-color: #ffffff;
+    padding: 3em 0.5em;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 0.8em;
+    filter: drop-shadow(0 0.3em 0.9em rgba(0, 0, 0, 0.25));
+  }
+  .draggable-objects,
+  .drop-points {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+  }
+  .draggable-image {
+    width: 15em;
+    cursor: move;
+  }
+  img {
+    width: 15em;
+    filter: drop-shadow(0 0.3em 0.9em rgba(0, 0, 0, 0.25));
+  }
+  .generations {
+    width: 17em;
+    height: 12em;
+    display: grid;
+    place-items: center;
+    border: 0.25em dashed #010c39;
+    border-radius: 0em;
+    font-size: 1em;
+  }
+  .dropped {
+    padding: 0;
+    background-color: #e5ffc8;
+  }
+  .controls-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+
+  }
+  .controls-container button {
+    font-size: 2em;
+    padding: 0.8em 1em;
+    border-radius: 0.2em;
+    border: none;
+    outline: none;
+    color: #010c39;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+  }
+  /*
+  .controls-container p {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+
+  */
+  .hide {
+    display: none;
+  }
+
+/* CARDS */
+
+  .cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card{
+    width: 20em;
+    height: 27em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.card img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 1em;
+}
+.card .details{
+    margin: 1em;
+}
+.card .details h3{
+    font-weight: 600;
+    width: 5em;
+}
+.card .details p{
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4em 8em 8em 8em;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+/* FOOTER */
+.footer {
+  margin: 5em
+}
