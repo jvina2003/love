@@ -1,6 +1,4 @@
-
-
-//Initial References
+//initial references
 let draggableObjects;
 let dropPoints;
 const startButton = document.getElementById("start");
@@ -25,7 +23,7 @@ let moveElement = false;
 //detect touch device
 const isTouchDevice = () => {
   try {
-    //create touch Event (It would fail for desktops and throw error)
+    //create touch event (fail for desktops and throw error)
     document.createEvent("TouchEvent");
     deviceType = "touch";
     return true;
@@ -37,32 +35,32 @@ const isTouchDevice = () => {
 
 let count = 0;
 
-//Random value from Array
+//random value from array
 const randomValueGenerator = () => {
   return data[Math.floor(Math.random() * data.length)];
 };
 
 
-//Drag & Drop Functions
+//drag & drop functions
 function dragStart(e) {
   if (isTouchDevice()) {
     initialX = e.touches[0].clientX;
     initialY = e.touches[0].clientY;
-    //Start movement for touch
+    //start movement for touch
     moveElement = true;
     currentElement = e.target;
   } else {
-    //For non touch devices set data to be transfered
+    //for non touch devices set data to be transfered
     e.dataTransfer.setData("text", e.target.id);
   }
 }
 
-//Events fired on the drop target
+//events fired on the drop target
 function dragOver(e) {
   e.preventDefault();
 }
 
-//For touchscreen movement
+//for touch screen
 const touchMove = (e) => {
   if (moveElement) {
     e.preventDefault();
@@ -109,9 +107,9 @@ const drop = (e) => {
       count += 1;
     }
   } else {
-    //Access data
+    //access data
     const draggedElementData = e.dataTransfer.getData("text");
-    //Get custom attribute value
+    //get custom attribute value
     const droppableElementData = e.target.getAttribute("data-id");
     if (draggedElementData === droppableElementData) {
       const draggedElement = document.getElementById(draggedElementData);
@@ -131,8 +129,6 @@ const drop = (e) => {
     }
   }
 
-  //Win Game Display
-
   //END
   if (count == 4) {
     result.innerText = `Well done! Read more below!`;
@@ -143,7 +139,7 @@ const drop = (e) => {
   }
 };
 
-//Creates img and text
+//creates img and text
 const creator = () => {
   dragContainer.innerHTML = "";
   dropContainer.innerHTML = "";
@@ -154,7 +150,7 @@ const creator = () => {
     if (!randomData.includes(randomValue)) {
       randomData.push(randomValue);
     } else {
-      //If value already exists then decrement i by 1
+      //if value already exists then decrement i by 1
       i -= 1;
     }
   }
@@ -168,7 +164,7 @@ const creator = () => {
     quoteDiv.innerHTML = `<img src="https://jvina2003.github.io/love/${i}.png" id="${i}">`;
     dragContainer.appendChild(quoteDiv);
   }
-  //Sort the array randomly before creating gen divs
+  //sort the array randomly before creating gen divs
   randomData = randomData.sort(() => 0.5 - Math.random());
   for (let i of randomData) {
     const genDiv = document.createElement("div");
@@ -180,20 +176,18 @@ const creator = () => {
   }
 };
 
-//Start Game
+//start Game
 startButton.addEventListener(
   "click",
   (startGame = async () => {
-    // currentElement = "";
     controls.classList.add("hide");
     startButton.classList.add("hide");
-    //This will wait for creator to create the images and then move forward
     await creator();
     count = 0;
     dropPoints = document.querySelectorAll(".generations");
     draggableObjects = document.querySelectorAll(".draggable-image");
 
-    //Events
+    //events
     draggableObjects.forEach((element) => {
       element.addEventListener("dragstart", dragStart);
       //for touch screen
