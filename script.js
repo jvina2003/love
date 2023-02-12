@@ -4,7 +4,7 @@
 let draggableObjects;
 let dropPoints;
 const startButton = document.getElementById("start");
-// const result = document.getElementById("result");
+const result = document.getElementById("result");
 const controls = document.querySelector(".controls-container");
 const dragContainer = document.querySelector(".draggable-objects");
 const dropContainer = document.querySelector(".drop-points");
@@ -25,7 +25,7 @@ let moveElement = false;
 //detect touch device
 const isTouchDevice = () => {
   try {
-    //We try to create Touch Event (It would fail for desktops and throw error)
+    //create touch Event (It would fail for desktops and throw error)
     document.createEvent("TouchEvent");
     deviceType = "touch";
     return true;
@@ -42,11 +42,6 @@ const randomValueGenerator = () => {
   return data[Math.floor(Math.random() * data.length)];
 };
 
-//Win Game Display
-const stopGame = () => {
-    controls.classList.remove("hide");
-    // ADD POPUP: READ MORE
-};
 
 //Drag & Drop Functions
 function dragStart(e) {
@@ -136,9 +131,15 @@ const drop = (e) => {
     }
   }
 
-  //Win
+  //Win Game Display
+
+  //END
   if (count == 4) {
-   // stopGame();
+    result.innerText = `Well done! Read more below!`;
+    const stopGame = () => {
+      controls.classList.remove("hide");
+      startButton.classList.remove("hide");
+    };
   }
 };
 
