@@ -108,6 +108,7 @@
     margin: 8em;
     padding-left: 5em;
     padding-right: 5em;
+    padding-top: 6em;
  }
 
 
@@ -201,6 +202,7 @@
   }
 
   .card{
+    margin-top: 10em;
     width: 20em;
     height: 33em;
     display: flex;
@@ -249,4 +251,41 @@
 .footer {
   margin: 5em 5em 8em 5em
 
+}
+
+
+
+/* panel styles */
+.panel {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  justify-content: space-evenly;
+  margin-top: -6.5em;
+  align-items: center;
+	/* outline: 10px solid red; */
+	/* turn above on to see the edge of panels */
+  overflow-y:auto;
+}
+
+/* colours */
+
+[data-paint="blue"] {
+	background-color: #f4f5ff;
+}
+
+[data-paint="green"] {
+	background-color: #f8fffe;
+}
+
+[data-paint="pink"] {
+	background-color: #fff4f9;
+}
+
+[data-paint="purple"] {
+	background-color: #fbf2ff;
 }
