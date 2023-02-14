@@ -111,6 +111,13 @@
     padding-top: 6em;
  }
 
+/* INTRO2 */
+
+.intro2{
+  margin: 8em;
+  padding-left: 5em;
+  padding-right: 5em;
+}
 
 
 /* QUIZ */
@@ -309,7 +316,7 @@
 }
 
 [data-paint="green"] {
-	background-color: #f8fffe;
+	background-color: #f4fbff;
 }
 
 [data-paint="pink"] {
