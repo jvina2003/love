@@ -63,6 +63,13 @@
     font-size: 1em;
   }
 
+  .heart img{
+    filter:none;
+    margin-top: 3em;
+    margin-bottom:-2em;
+    width: 6em;
+  }
+
 /* VIDEO */
   
 .bg-video-wrap {
@@ -175,7 +182,7 @@
     width: 100%;
     background-color: white;
     flex-direction: column;
-    margin-bottom: -2em;
+    margin-bottom: -5em;
   }
   .controls-container button {
     font-size: 2em;
@@ -199,6 +206,12 @@
   .hide {
     display: none;
   }
+
+  .controls-container img{
+    margin-top: 1.5em;
+   width:4em;
+  }
+  
 
 /* CARDS */
 
@@ -326,4 +339,7 @@
 [data-paint="purple"] {
 	background-color: #fbf2ff;
 }
+
+
+
 
